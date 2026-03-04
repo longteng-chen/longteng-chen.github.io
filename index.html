@@ -305,7 +305,7 @@ nav {
 
 .edu-item {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 1.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--rule);
@@ -315,10 +315,12 @@ nav {
 
 .edu-yr {
   font-family: 'Fira Code', monospace;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--soft);
-  padding-top: 0.18rem;
+  padding-top: 0.72rem;
   line-height: 1.4;
+  white-space: nowrap;
+  padding-right: 1.5rem;
 }
 
 .edu-right {}
@@ -400,31 +402,22 @@ footer a:hover { color: var(--blue); }
   .contact-strip { flex-direction: column; align-items: flex-start; }
 }
 
-.talk-item {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--rule);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-.talk-item:last-child { border-bottom: none; }
+.talks-table { width: 100%; border-collapse: collapse; }
+.talks-table tr { border-bottom: 1px solid var(--rule); }
+.talks-table tr:last-child { border-bottom: none; }
+.talks-table td { padding: 0.65rem 0; vertical-align: top; font-size: 0.88rem; }
 .talk-date {
+  width: 120px;
   font-family: 'Fira Code', monospace;
-  font-size: 0.78rem;
-  color: var(--accent);
-  letter-spacing: 0.02em;
-}
-.talk-venue {
-  font-size: 0.95rem;
-  color: var(--ink);
-}
-.talk-link a {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--soft);
-  text-decoration: none;
-  letter-spacing: 0.02em;
+  padding-right: 1.5rem;
+  white-space: nowrap;
+  padding-top: 0.72rem;
 }
-.talk-link a:hover { color: var(--accent); }
+.talk-text { color: var(--mid); line-height: 1.6; }
+.talk-text a { color: var(--blue); text-decoration: none; }
+.talk-text a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -582,47 +575,40 @@ footer a:hover { color: var(--blue); }
   <section id="talks" class="publications">
     <h2 class="section-title">talks</h2>
 
-    <div style="display:flex;flex-direction:column;gap:0.9rem;">
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Feb 2026</span> &middot; <span class="talk-venue">Seminar of Analysis, <em>University of Warwick</em>, Coventry</span></div>
-        <div class="talk-link"><a href="https://warwick.ac.uk/fac/sci/maths/research/events/seminars/" target="_blank" rel="noopener">seminar page &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Feb 2026</span> &middot; <span class="talk-venue">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>LMJL</em>, Nantes</span></div>
-        <div class="talk-link"><a href="https://www.math.sciences.univ-nantes.fr/exposes/993659" target="_blank" rel="noopener">seminar page &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Jan 2026</span> &middot; <span class="talk-venue">S&eacute;minaire TSG, <em>Institut Fourier</em>, Grenoble</span></div>
-        <div class="talk-link"><a href="https://www-fourier.univ-grenoble-alpes.fr/fr/node/27706" target="_blank" rel="noopener">seminar page &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>IMJ</em>, Paris</span></div>
-        <div class="talk-link"><a href="https://www.imj-prg.fr/gestion/evenement/affSeance/10617" target="_blank" rel="noopener">seminar page &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">S&eacute;minaire Syst&egrave;mes Dynamiques et G&eacute;om&eacute;trie, <em>LAREMA</em>, Angers</span></div>
-        <div class="talk-link"><a href="https://math.univ-angers.fr/seminaires/seminaires-systemes-dynamiques-et-geometrie/" target="_blank" rel="noopener">seminar page &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">Rencontre ANR Orbisar, <em>IMAG</em>, Montpellier</span></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Aug 2025</span> &middot; <span class="talk-venue">Seminar on Pure Mathematics, <em>HKUST</em>, Hong Kong</span></div>
-        <div class="talk-link"><a href="https://www.math.hkust.edu.hk/intranet/file/?c=seminar_abstract&amp;f=20250703101716_9-Longteng%20CHEN_0806.pdf" target="_blank" rel="noopener">abstract &#8599;</a></div>
-      </div>
-
-      <div class="talk-item">
-        <div class="talk-meta"><span class="talk-date">Jul 2025</span> &middot; <span class="talk-venue">Workshop of KRIS Program, <em>ENS Paris</em></span></div>
-      </div>
-
-    </div>
+    <table class="talks-table">
+      <tr>
+        <td class="talk-date">Feb 2026</td>
+        <td class="talk-text"><a href="https://warwick.ac.uk/fac/sci/maths/research/events/seminars/" target="_blank" rel="noopener">Seminar of Analysis, <em>University of Warwick</em>, Coventry</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Feb 2026</td>
+        <td class="talk-text"><a href="https://www.math.sciences.univ-nantes.fr/exposes/993659" target="_blank" rel="noopener">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>LMJL</em>, Nantes</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Jan 2026</td>
+        <td class="talk-text"><a href="https://www-fourier.univ-grenoble-alpes.fr/fr/node/27706" target="_blank" rel="noopener">S&eacute;minaire TSG, <em>Institut Fourier</em>, Grenoble</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Dec 2025</td>
+        <td class="talk-text"><a href="https://www.imj-prg.fr/gestion/evenement/affSeance/10617" target="_blank" rel="noopener">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>IMJ</em>, Paris</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Dec 2025</td>
+        <td class="talk-text"><a href="https://math.univ-angers.fr/seminaires/seminaires-systemes-dynamiques-et-geometrie/" target="_blank" rel="noopener">S&eacute;minaire Syst&egrave;mes Dynamiques et G&eacute;om&eacute;trie, <em>LAREMA</em>, Angers</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Dec 2025</td>
+        <td class="talk-text">Rencontre ANR Orbisar, <em>IMAG</em>, Montpellier</td>
+      </tr>
+      <tr>
+        <td class="talk-date">Aug 2025</td>
+        <td class="talk-text"><a href="https://www.math.hkust.edu.hk/intranet/file/?c=seminar_abstract&amp;f=20250703101716_9-Longteng%20CHEN_0806.pdf" target="_blank" rel="noopener">Seminar on Pure Mathematics, <em>HKUST</em>, Hong Kong</a></td>
+      </tr>
+      <tr>
+        <td class="talk-date">Jul 2025</td>
+        <td class="talk-text">Workshop of KRIS Program, <em>ENS Paris</em></td>
+      </tr>
+    </table>
   </section>
 
   <!-- EDUCATION -->
@@ -665,22 +651,6 @@ footer a:hover { color: var(--blue); }
       </div>
     </div>
 
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">contact</h2>
-    <div class="contact-strip">
-      <p>
-        The best way to reach me is by email. I am happy to discuss mathematics,
-        potential collaborations, or any questions about my research.
-      </p>
-      <span class="contact-email">
-        <a href="/cdn-cgi/l/email-protection#ed8182838a9988838ac38e858883ad9883849b889f9e849988c09d8c9f849ec09e8c8e818c94c38b9f">
-          <span class="__cf_email__" data-cfemail="630f0c0d0417060d044d000b060d23160d0a150611100a17064e1302110a104e1002000f021a4d0511">[email&#160;protected]</span>
-        </a>
-      </span>
-    </div>
   </section>
 
   <!-- FOOTER -->
