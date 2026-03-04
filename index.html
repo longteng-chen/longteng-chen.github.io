@@ -399,6 +399,32 @@ footer a:hover { color: var(--blue); }
   footer { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
   .contact-strip { flex-direction: column; align-items: flex-start; }
 }
+
+.talk-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.talk-item:last-child { border-bottom: none; }
+.talk-date {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.talk-venue {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.talk-link a {
+  font-size: 0.8rem;
+  color: var(--soft);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.talk-link a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -410,6 +436,7 @@ footer a:hover { color: var(--blue); }
     <ul class="nav-links">
       <li><a href="#about" class="active">about</a></li>
       <li><a href="#publications">publications</a></li>
+      <li><a href="#talks">talks</a></li>
       <li><a href="#education">education</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
@@ -431,7 +458,7 @@ footer a:hover { color: var(--blue); }
 
         <div class="social-row">
           <!-- Email -->
-          <a href="mailto:longteng.chen@universite-paris-saclay.fr" class="social-btn" title="Email">
+          <a href="/cdn-cgi/l/email-protection#82eeedece5f6e7ece5ace1eae7ecc2f7ecebf4e7f0f1ebf6e7aff2e3f0ebf1aff1e3e1eee3fbace4f0" class="social-btn" title="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
             email
           </a>
@@ -441,7 +468,7 @@ footer a:hover { color: var(--blue); }
             orcid
           </a>
           <!-- CV -->
-          <a href="https://longteng-chen.github.io/cv.pdf" class="social-btn" title="Curriculum Vitae" target="_blank" rel="noopener">
+          <a href="https://longteng-chen.github.io/cv.pdf" class="social-btn" target="_blank" rel="noopener" title="Curriculum Vitae">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
             cv
           </a>
@@ -550,6 +577,54 @@ footer a:hover { color: var(--blue); }
 
   </section>
 
+
+  <!-- TALKS -->
+  <section id="talks" class="publications">
+    <h2 class="section-title">talks</h2>
+
+    <div style="display:flex;flex-direction:column;gap:0.9rem;">
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Feb 2026</span> &middot; <span class="talk-venue">Seminar of Analysis, <em>University of Warwick</em>, Coventry</span></div>
+        <div class="talk-link"><a href="https://warwick.ac.uk/fac/sci/maths/research/events/seminars/" target="_blank" rel="noopener">seminar page &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Feb 2026</span> &middot; <span class="talk-venue">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>LMJL</em>, Nantes</span></div>
+        <div class="talk-link"><a href="https://www.math.sciences.univ-nantes.fr/exposes/993659" target="_blank" rel="noopener">seminar page &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Jan 2026</span> &middot; <span class="talk-venue">S&eacute;minaire TSG, <em>Institut Fourier</em>, Grenoble</span></div>
+        <div class="talk-link"><a href="https://www-fourier.univ-grenoble-alpes.fr/fr/node/27706" target="_blank" rel="noopener">seminar page &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">S&eacute;minaire d&apos;Analyse et G&eacute;om&eacute;trie, <em>IMJ</em>, Paris</span></div>
+        <div class="talk-link"><a href="https://www.imj-prg.fr/gestion/evenement/affSeance/10617" target="_blank" rel="noopener">seminar page &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">S&eacute;minaire Syst&egrave;mes Dynamiques et G&eacute;om&eacute;trie, <em>LAREMA</em>, Angers</span></div>
+        <div class="talk-link"><a href="https://math.univ-angers.fr/seminaires/seminaires-systemes-dynamiques-et-geometrie/" target="_blank" rel="noopener">seminar page &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Dec 2025</span> &middot; <span class="talk-venue">Rencontre ANR Orbisar, <em>IMAG</em>, Montpellier</span></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Aug 2025</span> &middot; <span class="talk-venue">Seminar on Pure Mathematics, <em>HKUST</em>, Hong Kong</span></div>
+        <div class="talk-link"><a href="https://www.math.hkust.edu.hk/intranet/file/?c=seminar_abstract&amp;f=20250703101716_9-Longteng%20CHEN_0806.pdf" target="_blank" rel="noopener">abstract &#8599;</a></div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta"><span class="talk-date">Jul 2025</span> &middot; <span class="talk-venue">Workshop of KRIS Program, <em>ENS Paris</em></span></div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- EDUCATION -->
   <section id="education" class="education">
     <h2 class="section-title">education</h2>
@@ -601,8 +676,8 @@ footer a:hover { color: var(--blue); }
         potential collaborations, or any questions about my research.
       </p>
       <span class="contact-email">
-        <a href="mailto:longteng.chen@universite-paris-saclay.fr">
-          longteng.chen@universite-paris-saclay.fr
+        <a href="/cdn-cgi/l/email-protection#ed8182838a9988838ac38e858883ad9883849b889f9e849988c09d8c9f849ec09e8c8e818c94c38b9f">
+          <span class="__cf_email__" data-cfemail="630f0c0d0417060d044d000b060d23160d0a150611100a17064e1302110a104e1002000f021a4d0511">[email&#160;protected]</span>
         </a>
       </span>
     </div>
@@ -618,5 +693,4 @@ footer a:hover { color: var(--blue); }
 
 </main>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Active nav highlight on
+<script data
